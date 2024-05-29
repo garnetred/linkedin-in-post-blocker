@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Hide LI Collab Articles",
-  "version": "0.0.3",
-  "description": "This Chrome browser extension hides collaborative articles on LinkedIn.",
+  "name": "LinkedIn Post Blocker",
+  "version": "0.0.1",
+  "description": "This browser extension allows uers to block posts in the LinkedIn feed that contain certain words",
   "permissions": ["scripting"],
   "icons": {
-    "16": "images/writing-emoji-16.png",
-    "32": "images/writing-emoji-32.png",
-    "48": "images/writing-emoji-48.png",
-    "128": "images/writing-emoji-128.png"
+    "16": "images/ban-emoji-16.png",
+    "32": "images/ban-emoji-32.png",
+    "48": "images/ban-emoji-48.png",
+    "128": "images/ban-emoji-128.png"
   },
   "background": {
     "service_worker": "scripts/background.js"
@@ -22,7 +22,9 @@
   "content_scripts": [
     {
       "matches": ["*://www.linkedin.com/*"],
-      "css": ["css/global.css"]
+      "css": ["css/global.css"],
+      "js": ["scripts/content.js"],
+      "run_at": "document_end"
     }
   ],
   "host_permissions": ["*://www.linkedin.com/*"],
