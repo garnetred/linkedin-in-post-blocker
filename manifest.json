@@ -10,9 +10,6 @@
     "48": "images/ban-emoji-48.png",
     "128": "images/ban-emoji-128.png"
   },
-  "background": {
-    "service_worker": "scripts/background.js"
-  },
   "web_accessible_resources": [
     {
       "resources": ["css/*.css"],
