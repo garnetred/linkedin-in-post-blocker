@@ -1,9 +1,17 @@
 <html class="popup-window" style="width: 200px">
   <body>
+    <script src="popup.js"></script>
     <h2>LinkedIn Post Blocker</h2>
     <form>
-<input type="textarea" />
-
+      <p>
+        Add any words you would like to be used to block posts with commas in
+        between.
+        <br />
+        Example: artificial intelligence, AI, layoffs <br \ />
+      </p>
+      <textarea class="popup__restrictions" name="word-restrictions" required>
+      </textarea>
+      <button type="submit">submit</button>
     </form>
     <p>
       version: 0.0.1 |
