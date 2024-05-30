@@ -12,9 +12,10 @@ const checkForRestrictedWords = (text, post) => {
 
 const callback = (mutationList, observer) => {
     mutationList.forEach(mutation => {
-    if (mutation.target.classList.contains('occludable-update')) {
+    if (mutation.target.classList.contains('feed-shared-update-v2')) {
         let container = mutation.target
         let update = container.querySelector('.update-components-text')
+        console.log('update', update)
         checkForRestrictedWords(update, container);
     }
 })
